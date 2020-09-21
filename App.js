@@ -4,10 +4,24 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-function Feed() {
+function Home() {
+  return (
+    Pager()
+  );
+}
+
+function Chat() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed!</Text>
+      <Text>Chat!</Text>
+    </View>
+  );
+}
+
+function Activity() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Activity!</Text>
     </View>
   );
 }
@@ -20,62 +34,70 @@ function Profile() {
   );
 }
 
-function Notifications() {
+function Pager() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
+      <Text>Pager!</Text>
     </View>
   );
 }
 
-const Tab = createMaterialBottomTabNavigator();
 
-function MyTabs() {
-  return (
-    <Tab.Navigator
-      initialRouteName="Feed"
-      activeColor="white"
-      labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'e91e63' }}
-    >
-      <Tab.Screen
-        name="Feed"
-        component={Feed}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: 'Updates',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={26} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs />
+      <Tab.Navigator
+        initialRouteName="Home"
+        activeColor="white"
+        //barStyle={{ backgroundColor: '#694fad' }}
+      >
+        <Tab.Screen 
+          name="Home"
+          component={Home} 
+          options={{
+           tabBarLabel: 'Home',
+            tabBarColor:'tomato',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="home" color={color} size={26} />
+            ),
+          }}
+         />
+        <Tab.Screen 
+          name="Chat" 
+          component={Chat} 
+          options={{
+            tabBarLabel: 'Chat',
+            tabBarColor:'#009387',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="chat" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen 
+          name="Activity" 
+          component={Activity} 
+          options={{
+            tabBarLabel: 'Activity',
+            tabBarColor:'#694fad',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="bell" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen 
+          name="Profile" 
+          component={Profile} 
+          options={{
+            tabBarLabel: 'Updates',
+            tabBarColor:'#d02860',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="account" color={color} size={26} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
