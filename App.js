@@ -62,10 +62,10 @@ export default function App() {
    
     <NavigationContainer>
        <Header
-          backgroundColor= "white"
-         leftComponent={{ icon: 'menu', color: '#694fad' }}
-         centerComponent={{ text: 'beaver', style: { fontSize:20,color: '#694fad' } }}
-         rightComponent={{ icon: 'home', color: '#694fad' }}
+          backgroundColor= "#694fad"
+         leftComponent={{ icon: 'menu', color: '#fff' }}
+         centerComponent={{ text: 'beaver', style: { fontSize:20,color: '#fff' } }}
+         rightComponent={{ icon: 'home', color: '#fff' }}
 />
       <Tab.Navigator
         initialRouteName="Home"
