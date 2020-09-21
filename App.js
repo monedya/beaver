@@ -3,10 +3,14 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Header } from 'react-native-elements';
+
+
+
 
 function Home() {
   return (
-    Pager()
+    Expenses()
   );
 }
 
@@ -42,23 +46,38 @@ function Pager() {
   );
 }
 
+function Expenses() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Expenses!</Text>
+    </View>
+  );
+}
+
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
+   
     <NavigationContainer>
+       <Header
+          backgroundColor= "white"
+         leftComponent={{ icon: 'menu', color: '#694fad' }}
+         centerComponent={{ text: 'beaver', style: { fontSize:20,color: '#694fad' } }}
+         rightComponent={{ icon: 'home', color: '#694fad' }}
+/>
       <Tab.Navigator
         initialRouteName="Home"
         activeColor="white"
-        //barStyle={{ backgroundColor: '#694fad' }}
+        barStyle={{ backgroundColor: '#694fad' }}
       >
         <Tab.Screen 
           name="Home"
           component={Home} 
           options={{
            tabBarLabel: 'Home',
-            tabBarColor:'tomato',
+            //tabBarColor:'tomato',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="home" color={color} size={26} />
             ),
@@ -69,7 +88,7 @@ export default function App() {
           component={Chat} 
           options={{
             tabBarLabel: 'Chat',
-            tabBarColor:'#009387',
+            //tabBarColor:'#009387',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="chat" color={color} size={26} />
             ),
@@ -80,7 +99,7 @@ export default function App() {
           component={Activity} 
           options={{
             tabBarLabel: 'Activity',
-            tabBarColor:'#694fad',
+          //  tabBarColor:'#694fad',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="bell" color={color} size={26} />
             ),
@@ -91,7 +110,7 @@ export default function App() {
           component={Profile} 
           options={{
             tabBarLabel: 'Updates',
-            tabBarColor:'#d02860',
+            //tabBarColor:'#d02860',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="account" color={color} size={26} />
             ),
