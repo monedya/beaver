@@ -37,7 +37,7 @@ function Profile() {
 function Pager() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Pager!</Text>
+      <Text>alo!</Text>
     </View>
   );
 }
