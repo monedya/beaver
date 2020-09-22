@@ -62,10 +62,10 @@ export default function App() {
    
     <NavigationContainer>
        <Header
-          backgroundColor= "#694fad"
+          backgroundColor= "tomato"
          leftComponent={{ icon: 'menu', color: '#fff' }}
          centerComponent={{ text: 'beaver', style: { fontSize:20,color: '#fff' } }}
-         rightComponent={{ icon: 'home', color: '#fff' }}
+         rightComponent={{ icon: 'home', color: '#fff',size: 20}}
 />
       <Tab.Navigator
         initialRouteName="Home"
@@ -77,7 +77,7 @@ export default function App() {
           component={Home} 
           options={{
            tabBarLabel: 'Home',
-            //tabBarColor:'tomato',
+            tabBarColor:'tomato',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="home" color={color} size={26} />
             ),
@@ -88,7 +88,7 @@ export default function App() {
           component={Chat} 
           options={{
             tabBarLabel: 'Chat',
-            //tabBarColor:'#009387',
+            tabBarColor:'#009387',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="chat" color={color} size={26} />
             ),
@@ -99,7 +99,7 @@ export default function App() {
           component={Activity} 
           options={{
             tabBarLabel: 'Activity',
-          //  tabBarColor:'#694fad',
+          tabBarColor:'#694fad',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="bell" color={color} size={26} />
             ),
@@ -110,7 +110,7 @@ export default function App() {
           component={Profile} 
           options={{
             tabBarLabel: 'Updates',
-            //tabBarColor:'#d02860',
+            tabBarColor:'#d02860',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="account" color={color} size={26} />
             ),
