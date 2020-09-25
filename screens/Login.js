@@ -25,7 +25,7 @@ function RegisterScreen() {
 
 const Stack = createStackNavigator();
 
-function App() {
+function Login() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
