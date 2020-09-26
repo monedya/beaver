@@ -18,9 +18,13 @@ function LoginScreen({ navigation }) {
 function RegisterScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Register Screen</Text>
-    </View>
-  );
+    <Text>Register Screen</Text>
+    <Button
+      title="Go to Main"
+      onPress={() => navigation.navigate('Register')}
+    />
+  </View>
+);
 }
 
 const Stack = createStackNavigator();
