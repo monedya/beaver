@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Login from './screens/Login.js'
-import Main from './screens/Main.js'
+import Login from './src/screens/Login'
+import Main from './src/screens/Main.js'
 
 
 export default function App() {
