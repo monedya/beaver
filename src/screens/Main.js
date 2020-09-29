@@ -4,15 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Header } from 'react-native-elements';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-
-
-
-function Home() {
-  return (
-    Expenses()
-  );
-}
 
 function Chat() {
   return (
@@ -38,10 +31,12 @@ function Profile() {
   );
 }
 
-function Pager() {
+
+//burasi yeni 
+function Chores() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>alo!</Text>
+      <Text>Chores!</Text>
     </View>
   );
 }
@@ -49,23 +44,43 @@ function Pager() {
 function Expenses() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Expenses!</Text>
+      <Text>Expenses1!</Text>
     </View>
   );
 }
 
+function List() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>List!</Text>
+    </View>
+  );
+}
+const Tab1 = createMaterialTopTabNavigator();
+
+ function Pager() {
+  return (
+    
+      <Tab1.Navigator
+      initialRouteName="Expenses"
+      >
+        <Tab1.Screen name="Chores" component={Chores} />
+          <Tab1.Screen name="Expenses" component={Expenses} />
+        <Tab1.Screen name="List" component={List} />
+      </Tab1.Navigator>
+    
+  );
+}
 
 const Tab = createMaterialBottomTabNavigator();
 
-export default function Main() {
+const Main = () =>  {
   return (
    
     <NavigationContainer>
        <Header
           backgroundColor= "tomato"
-         leftComponent={{ icon: 'menu', color: '#fff' }}
          centerComponent={{ text: 'beaver', style: { fontSize:20,color: '#fff' } }}
-         rightComponent={{ icon: 'home', color: '#fff',size: 20}}
 />
       <Tab.Navigator
         initialRouteName="Home"
@@ -74,7 +89,7 @@ export default function Main() {
       >
         <Tab.Screen 
           name="Home"
-          component={Home} 
+          component={Pager} 
           options={{
            tabBarLabel: 'Home',
             tabBarColor:'tomato',
@@ -120,3 +135,5 @@ export default function Main() {
     </NavigationContainer>
   );
 }
+
+export default Main
