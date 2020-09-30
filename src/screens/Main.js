@@ -5,7 +5,8 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Header } from 'react-native-elements';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-
+import ListScreen from './chorsHome'
+import choresNavigation from './chorsHome'
 
 function Chat() {
   return (
@@ -35,9 +36,8 @@ function Profile() {
 //burasi yeni 
 function Chores() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Chores!</Text>
-    </View>
+     <ListScreen/>
+
   );
 }
 
@@ -64,7 +64,7 @@ const Tab1 = createMaterialTopTabNavigator();
       <Tab1.Navigator
       initialRouteName="Expenses"
       >
-        <Tab1.Screen name="Chores" component={Chores} />
+        <Tab1.Screen name="Chores" component={choresNavigation} />
           <Tab1.Screen name="Expenses" component={Expenses} />
         <Tab1.Screen name="List" component={List} />
       </Tab1.Navigator>
