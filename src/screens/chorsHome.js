@@ -1,24 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {View,StyleSheet,Button,FlatList,Text,TouchableOpacity,Image} from 'react-native'
 import detailedChores from './detailedChoresPage'
 import { createStackNavigator } from '@react-navigation/stack';
 
-const ListScreen = ({navigation,name})=>{
-    const turns = [
+const ListScreen = ({navigation})=>{
+
+    const [turns,setTurns] = useState([
         {name:'Ahmet', key:1},
         {name:'Mehmet', key:2},
         {name:'Ali', key:3},
         {name:'Osman', key:4},
-    ]
+    ])
     return (
             <View style={styles.container}>
             <FlatList 
             keyExtractor={(item)=>item.key}
             data={turns}
             renderItem={({item})=>{
-                return  <TouchableOpacity onPress={()=>{navigation.navigate("Details")}}>
+                return  <TouchableOpacity onPress={()=>{navigation.navigate("Details",item)}}>
                 <View style={styles.container1}>
-                    <Image style={styles.image} source={{uri:'https://randomuser.me/api/portraits/men/86.jpg'}}/>
+                    <Image style={styles.image} source={{uri:'https://randomuser.me/api/portraits/men/83.jpg'}}/>
                     <View>
                     <Text style={styles.topText}>Next turn:</Text>
                     <Text style={styles.itemText1}>{item.name}</Text>
