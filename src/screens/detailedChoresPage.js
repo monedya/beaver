@@ -4,6 +4,7 @@ import CustomButton from '../components/customButton'
 
 const detailedChores = ({navigation,route}) => {
     const{name}=route.params
+    const{turns}=route.params
     return (
         <View style={styles.container}>
             <Text style={styles.editText}>Edit</Text>
@@ -23,7 +24,10 @@ const detailedChores = ({navigation,route}) => {
             <TextInput style={styles.textInput}/>
             <Text style={styles.turnHistoryText}>Turn History</Text>
             <View>
-                <FlatList/>
+    <Text>{name}</Text>
+                <Text style={styles.turnText}>History gelecek</Text>
+                <Text style={styles.turnText}>History gelecek</Text>
+                <Text style={styles.turnText}>History gelecek</Text>
             </View>
         </View>
     )

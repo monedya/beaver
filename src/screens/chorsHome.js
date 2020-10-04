@@ -17,7 +17,7 @@ const ListScreen = ({navigation})=>{
             keyExtractor={(item,index)=>item.key}
             data={turns}
             renderItem={({item})=>{
-                return  <TouchableOpacity onPress={()=>{navigation.navigate("Details",item)}}>
+                return  <TouchableOpacity onPress={()=>{navigation.navigate("Details",item,turns)}}>
                 <View style={styles.container1}>
                     <Image style={styles.image} source={{uri:'https://randomuser.me/api/portraits/men/83.jpg'}}/>
                     <View>
