@@ -1,7 +1,6 @@
 import React from 'react'
 import {View, Text,StyleSheet,Button,FlatList,Image,TextInput,TouchableOpacity} from 'react-native'
 import CustomButton from '../components/customButton'
-import ListScreen from './chorsHome'
 
 const detailedChores = ({navigation,route}) => {
     const{name}=route.params
@@ -50,7 +49,6 @@ const styles = StyleSheet.create({
         height:45,
         borderRadius:25,
         borderWidth:1,
-        borderStyle: 'solid',
         borderColor:'black'},
     turnText:{
         fontWeight: 'bold',

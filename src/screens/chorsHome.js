@@ -6,15 +6,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 const ListScreen = ({navigation})=>{
 
     const [turns,setTurns] = useState([
-        {name:'Ahmet', key:1},
-        {name:'Mehmet', key:2},
-        {name:'Ali', key:3},
-        {name:'Osman', key:4},
+        {name:'Ahmet', key:'a'},
+        {name:'Mehmet', key:'b'},
+        {name:'Ali', key:'c'},
+        {name:'Osman', key:'d'},
     ])
     return (
             <View style={styles.container}>
             <FlatList 
-            keyExtractor={(item)=>item.key}
+            keyExtractor={(item,index)=>item.key}
             data={turns}
             renderItem={({item})=>{
                 return  <TouchableOpacity onPress={()=>{navigation.navigate("Details",item)}}>
@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
         height:45,
         borderRadius:25,
         borderWidth:1,
-        borderStyle: 'solid',
         borderColor:'black'
     },
     container1: {
