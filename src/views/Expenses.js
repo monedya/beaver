@@ -1,11 +1,15 @@
 import * as React from 'react';
-import{Text,SafeAreaView} from 'react-native'
+import{Text} from 'react-native'
+
+import Box from '../components/box'
 
 export default function Expenses() {
   return (  
-    <SafeAreaView>  
-       <Text>exp</Text>
-    </SafeAreaView>
+    <Box>  
+ 
+       <Text>esad</Text>
+
+    </Box>
  
   );
 }

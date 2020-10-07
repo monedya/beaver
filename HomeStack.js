@@ -38,9 +38,9 @@ function HomeStack() {
   return (
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomePage} />
-         <Stack.Screen name="Chores" component={Chores} />
-         <Stack.Screen name="Expenses" component={Expenses} />
-         <Stack.Screen name="List" component={List} />
+        <Stack.Screen name="Chores" component={Chores} />
+        <Stack.Screen name="Expenses" component={Expenses} />
+        <Stack.Screen name="List" component={List} />
     </Stack.Navigator>    
     
   );
