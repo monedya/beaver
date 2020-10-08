@@ -1,5 +1,5 @@
 import * as React from 'react';
-import{Text,Button,View,SafeAreaView} from 'react-native'
+import{Button,View} from 'react-native'
 
 import { enableScreens } from 'react-native-screens';
 import {createNativeStackNavigator } from 'react-native-screens/native-stack';
@@ -12,12 +12,12 @@ function HomePage ({navigation}) {
   return (  
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
-        title="Chores"
-        onPress={() => navigation.navigate('Chores')}
-      />
-      <Button
         title="Expenses"
         onPress={() => navigation.navigate('Expenses')}
+      />
+      <Button
+        title="Chores"
+        onPress={() => navigation.navigate('Chores')}
       />
       <Button
         title="List"

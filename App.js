@@ -1,10 +1,10 @@
 import * as React from 'react';
 import{Text,SafeAreaView} from 'react-native'
 
-import MainNavigator from './navigator.js'
+import TabNavigator from './tabNavigator'
 
 export default function App() {
   return (  
-   <MainNavigator/>
+   <TabNavigator/>
   );
 }
