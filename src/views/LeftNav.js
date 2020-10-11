@@ -1,11 +1,15 @@
 import * as React from 'react';
 import{Text,SafeAreaView} from 'react-native'
 
+import Box from '../components/box'
+import ExpenseChart from '../components/Expensechart'
+
 export default function Left() {
   return (  
-    <SafeAreaView>  
-       <Text>Left</Text>
-    </SafeAreaView>
+    <Box flex={1}>
+      <ExpenseChart/>
+    </Box>
+    
  
   );
 }

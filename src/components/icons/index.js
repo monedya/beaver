@@ -1,4 +1,6 @@
+export { default as Arrow } from './Arrow'
 export { default as Bell } from './Bell'
 export { default as CreditCard } from './CreditCard'
+export { default as Deneme } from './Deneme'
 export { default as Home } from './Home'
 export { default as MessageSquare } from './MessageSquare'

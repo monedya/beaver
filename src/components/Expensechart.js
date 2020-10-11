@@ -1,12 +1,12 @@
-import * as React from 'react';
-import Text from '../components/text'
-import Box from '../components/box'
-import ExpenseBox from '../components/expensebox'
+import React from 'react';
+import Box from './box';
+import Text from './text';
+import Arrow from './icons/Arrow'
 
+const ExpenseChart = () => {
 
-export default function Expenses() {
-  return (
-    <Box flex={1}>
+    return (
+        <Box flex={1}>
     <Box p={10} >
       <Box flexDirection={'column'} height={160} borderRadius={'normal'} bg={'tomato'}>
         <Text p={10} fontSize={24} color={'#eeeeee'} >Total Expense: 10,000$</Text>
@@ -14,14 +14,9 @@ export default function Expenses() {
         <Text p={10} fontSize={20} color={'#eeeeee'} > Expense: 567$</Text>      
       </Box>
     </Box>
-
-    <Box>
-      <ExpenseBox/>
-      <ExpenseBox/>
-      <ExpenseBox/>
     </Box>
+    );
 
-    </Box>
-
-  );
 }
+
+export default ExpenseChart
