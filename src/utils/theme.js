@@ -5,7 +5,7 @@ const colors={
     gray: '#A8A8A8'
 }
 const radii={
-    normal: 20,
+    normal: 10,
     full: 9999,
 }
 
