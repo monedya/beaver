@@ -14,5 +14,6 @@ const Box = styled(View)(
     ),
 );
 
+
 export default Box;
 

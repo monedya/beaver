@@ -9,7 +9,7 @@ const ExpenseBox = () => {
 
     return (
         <Box as={Button} p={10} >
-            <Box flexDirection={'row'} height={80} bg={'white'} borderRadius="normal" shadowColor="gray" shadowOpacity="0.1">
+            <Box flexDirection={'row'} height={80} bg={'white'} borderRadius="normal" shadowColor="blue" shadowOpacity="0.15">
                 <Box ml={24} justifyContent="center">
                     <Arrow />
                 </Box>

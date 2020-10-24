@@ -3,13 +3,14 @@ import Svg, { G, Path } from "react-native-svg";
 
 function SvgArrow(props) {
   return (
-    <Svg width="32" height="32" viewBox="0 0 20.325 20.325" {...props}>
-      <G data-name="Group 12">
-        <Path
-          data-name="Path 2"
-          d="M16.36 3.724l-7.888.44 2.071 2.234-8.03 8.492 3.255 3.513 8.03-8.492 2.07 2.235z"
-          fill="#57ff89"
-        />
+    <Svg width="24" height="24" viewBox="0 0 84.853 84.853" {...props}>
+      <G data-name="noun_Arrow_698878">
+        <G data-name="Group 12">
+          <Path
+            data-name="Path 2"
+            d="M17.677 67.174l34.648.708-9.9-9.9 32.528-32.527L59.396 9.9 26.87 42.426l-9.9-9.9z"
+          />
+        </G>
       </G>
     </Svg>
   );
