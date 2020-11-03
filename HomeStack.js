@@ -12,7 +12,9 @@ import Chores from './src/views/Chores'
 import Expenses from './src/views/Expenses'
 import List from './src/views/List'
 
-import AddExpense from './src/views/Addexpense'
+import AddExpense from './src/views/AddExpense'
+import AddList from './src/views/AddList'
+import AddChores from './src/views/AddChores'
 
 
 import AccountBalanceWallet24Px from './src/components/icons/AccountBalanceWallet24Px'
@@ -45,7 +47,7 @@ function HomePage({ navigation }) {
 
       {/* Add Button */}
       <Box alignItems="flex-end">
-        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full' onPress={() => navigation.navigate('Addexpense')} >
+        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full' onPress={() => navigation.navigate('AddExpense')} >
           <AddCircle24Px width={32} height={32} fill={'black'} />
         </Box>
       </Box>
@@ -73,7 +75,7 @@ function HomePage({ navigation }) {
 
       {/* Add Button */}
       <Box alignItems="flex-end">
-        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
+        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full' onPress={() => navigation.navigate('AddChores')} >
           <AddCircle24Px width={32} height={32} fill={'black'} />
         </Box>
       </Box>
@@ -101,7 +103,7 @@ function HomePage({ navigation }) {
 
       {/* Add Button */}
       <Box alignItems="flex-end" > 
-        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
+        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full' onPress={() => navigation.navigate('AddList')}  >
           <AddCircle24Px width={32} height={32} fill={'black'} />
         </Box>
       </Box>
@@ -132,7 +134,9 @@ function HomeStack() {
         }} />
       <Stack.Screen name="Chores" component={Chores} />
       <Stack.Screen name="List" component={List} />
-      <Stack.Screen name="Addexpense" component={AddExpense} />
+      <Stack.Screen name="AddExpense" component={AddExpense} />
+      <Stack.Screen name="AddChores" component={AddChores} />
+      <Stack.Screen name="AddList" component={AddList} />
     </Stack.Navigator>
 
   );
