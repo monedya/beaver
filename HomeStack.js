@@ -39,7 +39,10 @@ function HomePage({ navigation }) {
           <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
-
+        <Text mt={8} >data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
       </Box>
 
       {/* Add Button */}
@@ -64,7 +67,10 @@ function HomePage({ navigation }) {
           <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
-        
+        <Text mt={8} >data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
       </Box>
 
       {/* Add Button */}
@@ -89,7 +95,10 @@ function HomePage({ navigation }) {
           <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
-
+        <Text mt={8} >data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
+        <Text>data</Text>
       </Box>
 
       {/* Add Button */}
