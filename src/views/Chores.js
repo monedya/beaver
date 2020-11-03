@@ -1,12 +1,11 @@
 import React,{useState} from 'react'
-import {View,StyleSheet,Button,FlatList,TouchableOpacity,Image} from 'react-native'
 import detailedChores from './detailedChores'
 import { createStackNavigator } from '@react-navigation/stack';
 import {ScrollView} from 'react-native'
 import Box from '../components/box'
-import ExpenseBox from '../components/expensebox'
 import Text from '../components/text'
-import ChoreBox from '../components/choreList'
+import ChoreBox from '../components/choreBox'
+import Button from '../components/button'
 
 const ListScreen = ({navigation})=>{
 
@@ -16,6 +15,12 @@ return (
       <ChoreBox/>
       <ChoreBox/>
       <ChoreBox/>
+      <Box as={Button} bg={'#00CBFF'} ml={20} mr={20} 
+      flexDirection={'row'} height={48} borderRadius={12} mt={35}
+      //onPress={navigation.navigate('Details')}
+      >
+        <Text color={'white'} fontSize={22} >Add Chores</Text>
+      </Box>
    </Box>
 )}
             
