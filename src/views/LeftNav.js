@@ -7,9 +7,8 @@ import ExpenseChart from '../components/Expensechart'
 export default function Left() {
   return (  
     <Box flex={1}>
-      <ExpenseChart/>
+      <Text>esad</Text>
     </Box>
     
- 
   );
 }

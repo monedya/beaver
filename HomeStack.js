@@ -12,100 +12,40 @@ import Chores from './src/views/Chores'
 import Expenses from './src/views/Expenses'
 import List from './src/views/List'
 
-import AddShoppingCart from './src/components/icons/AddShoppingCart'
-import AddTask from './src/components/icons/AddTask'
-import Receipt from './src/components/icons/Receipt'
+
+import AccountBalanceWallet24Px from './src/components/icons/AccountBalanceWallet24Px'
 import AddCircle24Px from './src/components/icons/AddCircle24Px'
+
 
 function HomePage({ navigation }) {
   return (
-    <Box as={ScrollView} >
+    <Box as={ScrollView} bg={'#d6e0f0'} >
+      <Box m={8} p={8} flex={1} flexDirection={'column'} bg={''} borderRadius={'normal'} shadowColor="black" shadowOpacity="0.2" shadowRadius="8" >
+      <Box flexDirection={'row'} alignItems="center">
+        <AccountBalanceWallet24Px width={32} height={32} fill="black" />
+        <Text ml={16} fontSize={24} mb={2} >Expenses</Text>
+      </Box>
+      {/* Content Box */}
+      <Box as={Button} flex={1} flexDirection={'column'}
 
-      {/* Expenses Chart */}
-
-      <Box p={8} flex={1} flexDirection={'column'} >
-
-        {/* Content Box */}
-        <Box as={Button} flex={1} flexDirection={'column'}
-
-          alignItems="flex-start" onPress={() => navigation.navigate('Expenses')}>
-          <Text mb={2} >Expenses</Text>
-          <Box flexDirection={'row'}>
-            <Box mb={2} height={2} flex={1} bg={'black'}  >
-            </Box>
-          </Box>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-        </Box>
-
-        {/* Add Button */}
-        <Box alignItems="flex-end">
-          <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
-            <AddCircle24Px width={32} height={32} fill={'black'} />
+        alignItems="flex-start" onPress={() => navigation.navigate('Expenses')}>
+        <Box flexDirection={'row'}>
+          <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
+        <Text mt={8} >Esad</Text>
+        <Text>Esad</Text>
+        <Text>Esad</Text>
+        <Text>Esad</Text>
       </Box>
 
-
-      {/* Chores */}
-      <Box p={8} flex={1} flexDirection={'column'} >
-
-        {/* Content Box */}
-        <Box as={Button} flex={1} flexDirection={'column'}
-
-          alignItems="flex-start" onPress={() => navigation.navigate('Chores')}>
-          <Text mb={2} >Chores</Text>
-          <Box flexDirection={'row'}>
-            <Box mb={2} height={2} flex={1} bg={'black'}  >
-            </Box>
-          </Box>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-        </Box>
-
-        {/* Add Button */}
-        <Box alignItems="flex-end">
-          <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
-            <AddCircle24Px width={32} height={32} fill={'black'} />
-          </Box>
+      {/* Add Button */}
+      <Box alignItems="flex-end">
+        <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
+          <AddCircle24Px width={32} height={32} fill={'black'} />
         </Box>
       </Box>
-      {/* Chores */}
-
-      {/* List */}
-
-      <Box p={8} flex={1} flexDirection={'column'} >
-
-        {/* Content Box */}
-        <Box as={Button} flex={1} flexDirection={'column'}
-
-          alignItems="flex-start" onPress={() => navigation.navigate('List')}>
-          <Text mb={2} >Need List</Text>
-          <Box flexDirection={'row'}>
-            <Box mb={2} height={2} flex={1} bg={'black'}  >
-            </Box>
-          </Box>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-          <Text>Esad</Text>
-        </Box>
-
-        {/* Add Button */}
-        <Box alignItems="flex-end">
-          <Box as={Button} mt={-24} width={48} height={48} borderRadius='full'  >
-            <AddCircle24Px width={32} height={32} fill={'black'} />
-          </Box>
-        </Box>
-      </Box>
-
-      {/* List */}
-
-
+    </Box>
     </Box>
 
   );
@@ -117,9 +57,20 @@ const Stack = createNativeStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomePage} />
+      <Stack.Screen name="Home" component={HomePage}
+        options={{
+          headerStyle: {
+            backgroundColor: '#1f3c88'
+          },
+          headerTintColor: '#fff',
+        }} />
+      <Stack.Screen name="Expenses" component={Expenses}
+        options={{
+          headerStyle: {
+            backgroundColor: '#eeeeee'
+          }
+        }} />
       <Stack.Screen name="Chores" component={Chores} />
-      <Stack.Screen name="Expenses" component={Expenses} />
       <Stack.Screen name="List" component={List} />
     </Stack.Navigator>
 

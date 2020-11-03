@@ -1,4 +1,5 @@
 const space = [];
+const fontSizes=[];
 
 const colors={
     softwhite:"#EEEEEE",
@@ -13,4 +14,5 @@ const radii={
 export default {
     space,
     radii,
+    fontSizes,
 }
