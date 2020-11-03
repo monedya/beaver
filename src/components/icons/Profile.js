@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { G, Path } from "react-native-svg";
 
-function SvgNounProfile956157(props) {
+function Profile(props) {
   return (
     <Svg width="24" height="24" viewBox="0 0 22.434 21.305" {...props}>
       <G data-name="Group 15">
@@ -20,4 +20,4 @@ function SvgNounProfile956157(props) {
   );
 }
 
-export default SvgNounProfile956157;
+export default Profile;

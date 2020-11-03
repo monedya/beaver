@@ -6,7 +6,8 @@ import {
     size,
     space,
     layout,
-    typography
+    typography,
+    flexbox
 } from 'styled-system'
 
 const Input = styled(TextInput)(
@@ -16,6 +17,7 @@ const Input = styled(TextInput)(
         space,
         layout,
         typography,
+        flexbox,
     ),
 );
 
