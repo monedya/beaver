@@ -12,7 +12,7 @@ import Chores from './src/views/Chores'
 import Expenses from './src/views/Expenses'
 import List from './src/views/List'
 
-import AddExpense from './src/views/Addexpense'
+import AddExpense from './src/views/AddExpense'
 import AddList from './src/views/AddList'
 import AddChores from './src/views/AddChores'
 

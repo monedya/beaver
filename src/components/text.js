@@ -6,7 +6,8 @@ import {
     size,
     space,
     layout,
-    typography
+    typography,
+    flexbox,
 } from 'styled-system'
 
 const Text = styled(T)(
@@ -15,7 +16,8 @@ const Text = styled(T)(
         size,
         space,
         layout,
-        typography
+        typography,
+        flexbox,
     ),
 );
 
