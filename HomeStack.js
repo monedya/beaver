@@ -85,20 +85,19 @@ function HomePage({ navigation }) {
     <Box m={8} p={8} flex={1} flexDirection={'column'} bg={''} borderRadius={'normal'} shadowColor="black" shadowOpacity="0.2" shadowRadius="8" >
       <Box flexDirection={'row'} alignItems="center">
         <AccountBalanceWallet24Px width={32} height={32} fill="black" />
-        <Text ml={16} fontSize={24} mb={2} >List</Text>
+        <Text ml={16} fontSize={24} mb={2} >Shopping List</Text>
       </Box>
       {/* Content Box */}
       <Box as={Button} flex={1} flexDirection={'column'}
 
         alignItems="flex-start" onPress={() => navigation.navigate('List')}>
-        <Box flexDirection={'row'}>
-          <Box mt={8} height={2} flex={1} bg={'black'}  >
-          </Box>
-        </Box>
-        <Text mt={8} >Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
+        <Box p={10} >
+      <Box flexDirection={'column'} height={160} borderRadius={'normal'} bg={'#1f3c88'}>
+        <Text p={10} fontSize={24} color={'#eeeeee'} >Shopping List </Text>
+        <Text p={10} fontSize={20} color={'#eeeeee'} > Bread</Text>
+        <Text p={10} fontSize={20} color={'#eeeeee'} > Apple</Text>      
+      </Box>
+    </Box>
       </Box>
 
       {/* Add Button */}
@@ -118,7 +117,7 @@ const Stack = createNativeStackNavigator();
 
 function HomeStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator >
       <Stack.Screen name="Home" component={HomePage}
         options={{
           headerStyle: {
