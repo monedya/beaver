@@ -39,10 +39,7 @@ function HomePage({ navigation }) {
           <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
-        <Text mt={8} >Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
+
       </Box>
 
       {/* Add Button */}
@@ -67,10 +64,7 @@ function HomePage({ navigation }) {
           <Box mt={8} height={2} flex={1} bg={'black'}  >
           </Box>
         </Box>
-        <Text mt={8} >Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
-        <Text>Esad</Text>
+        
       </Box>
 
       {/* Add Button */}
@@ -90,14 +84,12 @@ function HomePage({ navigation }) {
       {/* Content Box */}
       <Box as={Button} flex={1} flexDirection={'column'}
 
-        alignItems="flex-start" onPress={() => navigation.navigate('List')}>
-        <Box p={10} >
-      <Box flexDirection={'column'} height={160} borderRadius={'normal'} bg={'#1f3c88'}>
-        <Text p={10} fontSize={24} color={'#eeeeee'} >Shopping List </Text>
-        <Text p={10} fontSize={20} color={'#eeeeee'} > Bread</Text>
-        <Text p={10} fontSize={20} color={'#eeeeee'} > Apple</Text>      
-      </Box>
-    </Box>
+        alignItems="flex-start" onPress={() => navigation.navigate('Chores')}>
+        <Box flexDirection={'row'}>
+          <Box mt={8} height={2} flex={1} bg={'black'}  >
+          </Box>
+        </Box>
+
       </Box>
 
       {/* Add Button */}
