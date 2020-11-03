@@ -51,14 +51,14 @@ export default function AddExpense() {
         <Box alignItems="center" flexDirection={'row'}>
 
           <Text flex={1} mx={10} fontSize={24} >Who Pays</Text>
-          <Text ml={10} fontSize={24} >Amount</Text>
+          <Text ml={10} fontSize={24} >Amount </Text>
         </Box>
       </Box>
 
       <Box as={Button} mx={10} flex={1} flexDirection={'row'} height={50} alignItems="center" >
         <Profile margin={10} fill={'black'} />
         <Text m={10} flex={1} fontSize={20} >Osman Kaya</Text>
-        <Box alignItems="center" height={20} >
+        <Box alignItems="center" height={25} >
           <Input alignSelf='center' fontSize={24}>47.32$</Input>
         </Box>
       </Box>
@@ -66,16 +66,16 @@ export default function AddExpense() {
       <Box as={Button} mx={10} flex={1} flexDirection={'row'} height={50} alignItems="center">
         <Profile margin={10} fill={'black'} />
         <Text m={10} flex={1} fontSize={20} >Esad</Text>
-        <Box alignItems="center" height={20} >
-          <Input alignSelf='center' fontSize={24}>47.32$</Input>
+        <Box alignItems="center" height={25} >
+          <Input alignSelf='center' fontSize={24}>47.32$ </Input>
         </Box>
       </Box>
 
       <Box as={Button} mx={10} flex={1} flexDirection={'row'} height={50} alignItems="center">
         <Profile margin={10} fill={'black'} />
         <Text m={10} flex={1} fontSize={20} >Utku Uğur</Text>
-        <Box alignItems="center" height={20} >
-          <Input alignSelf='center' fontSize={24}>47.32$</Input>
+        <Box alignItems="center" height={25} >
+          <Input alignSelf='center' fontSize={24}>47.32$ </Input>
         </Box>
       </Box>
 
@@ -83,7 +83,7 @@ export default function AddExpense() {
         <Profile margin={10} fill={'black'} />
         <Text m={10} flex={1} fontSize={20} >Murathan</Text>
         <Box alignItems="center" height={20} >
-          <Input alignSelf='center' fontSize={24}>47.32$</Input>
+          <Input alignSelf='center' fontSize={24}>47.32$ </Input>
         </Box>
       </Box>
       <Box mx={10} height={2} flexDirection={'row'} >
