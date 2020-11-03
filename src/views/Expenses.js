@@ -16,6 +16,7 @@ export default function Expenses() {
       </Box>
     </Box>
 
+
     <Box>
       <ExpenseBox/>
       <ExpenseBox/>
